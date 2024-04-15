@@ -4,9 +4,9 @@ import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 
 class UsingValAndVarsSpec extends AnyFunSpec with Matchers {
-    describe("a simple canary test") {
-        it("should prove something simple like 1 should be 1") {
-          1 should be (1)
+    describe("a canary test") {
+        it("should prove that one is one") {
+            1 should be (1)
         }
     }
     describe("a var") {
@@ -28,7 +28,7 @@ class UsingValAndVarsSpec extends AnyFunSpec with Matchers {
     describe("a lazy val") {
         it("is unresolved until requested") {
             lazy val x = {println("Loading the value"); 10}
-            println("This statement should come up first")
+            println("This statement should come first")
             val result = x + 20
             result should be (30)
         }
