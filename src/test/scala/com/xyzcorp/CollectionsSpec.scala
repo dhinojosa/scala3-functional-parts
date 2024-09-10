@@ -34,11 +34,10 @@ class CollectionsSpec extends AnyFunSpec with Matchers {
                     ethiopia
                 )
                 africaCountries.size should be(5)
-
-                nigeria.name = "Ethiopia"
-                nigeria.capital = "Addis Ababa"
-
-                africaCountries.size should be(4)
+//              Uncomment the following and  see the results of doing so.
+//                nigeria.name = "Ethiopia"
+//                nigeria.capital = "Addis Ababa"
+//                africaCountries.size should be(4)
         describe("a map"):
             it("is a sequence of associative pairs"):
                 val map = Map("Norway" -> "Oslo", "Ghana" -> "Accra", "Chile" -> "Santiago")
